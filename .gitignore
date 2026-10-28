@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.secrets/
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+.cache/
+__pycache__/
+*.py[cod]
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.log
+.venv/

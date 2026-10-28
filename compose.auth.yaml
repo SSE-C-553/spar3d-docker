@@ -1,0 +1,9 @@
+# Use only for inference. Building and doctor do not require a token file.
+services:
+  app:
+    secrets:
+      - hf_token
+
+secrets:
+  hf_token:
+    file: ./.secrets/hf_token

@@ -1,0 +1,28 @@
+name: spar3d-docker
+
+services:
+  app:
+    image: spar3d-docker:local
+    build:
+      context: .
+      args:
+        TORCH_CUDA_ARCH_LIST: ${TORCH_CUDA_ARCH_LIST:-8.6;8.9+PTX}
+    init: true
+    environment:
+      HF_TOKEN_FILE: /run/secrets/hf_token
+    volumes:
+      - ./input:/data/input:ro
+      - ./output:/data/output
+      - model-cache:/cache
+      - background-cache:/root/.transparent-background
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  model-cache:
+  background-cache:

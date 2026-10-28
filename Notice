@@ -1,0 +1,21 @@
+This Stability AI Model is licensed under the Stability AI Community License, Copyright ©  Stability AI Ltd.
+All Rights Reserved
+
+Powered by Stability AI
+
+Upstream: https://github.com/Stability-AI/stable-point-aware-3d
+Upstream revision: fdc311b16809e6a8adc2f5a3407ebb3db1a95bd1
+Upstream license: licenses/STABILITY-AI-COMMUNITY-LICENSE.md
+
+spar3d-docker is an independent, unofficial launcher project.
+The upstream source is retrieved during the container build; model weights
+are obtained separately by the user at runtime. This repository does not
+distribute model weights or prebuilt container images.
+
+No changes are made to upstream source code by this project. The independently
+authored launcher supplies command-line arguments and organizes input/output
+files around the upstream command-line program. Container configuration pins
+upstream and selected dependency versions. These wrapper contributions are
+Copyright (c) 2026 SSE-C-553 and are licensed separately under the MIT License
+in LICENSE. Upstream materials and third-party dependencies retain their own
+licenses and notices.
